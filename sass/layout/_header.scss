@@ -9,7 +9,7 @@
     background-size: cover;
     background-position: top;
     position: relative;
-  
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   
     &__logo-box {
@@ -29,6 +29,5 @@
       transform: translate(-50%, -50%);
       text-align: center;
     }
-  }
-  
-  /* .text-box is is how u set things in the middle(center) */
+  } 
+ 
