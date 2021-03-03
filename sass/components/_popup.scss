@@ -1,28 +1,44 @@
 .popup {
-    height: 100vh;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  background-color: rgba($color-black, 0.8);
+
+  &__content {
+    height: 70vh;
+    width: 60%;
+    z-index: 5100;
+    background-color: white;
+    // border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden; //fixes border radius at image edges
+  }
+
+  &__left {
+    display: block;
     width: 100%;
-    position: fixed;
-    z-index: 5000;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+  }
 
+  &__img {
+    display: block;
+    width: 45%;
+  }
 
- 
-
-    &__content {
-        height: 70vh;
-        width: 60%;
-        z-index: 5100;
-        background-color: white;
-        border: 1px solid #ccc;
-        box-shadow: 1px 1px 1px black;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
-
+  &__right {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    right: 5%;
+    width: 50%;
+  }
 }
-
-
