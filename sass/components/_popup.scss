@@ -6,6 +6,12 @@
   left: 0;
   background-color: rgba($color-black, 0.8);
   z-index: 5000;
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all .3s;
+
+  
 
   &__content {
     @include centerHorizontalVertical;
@@ -14,12 +20,15 @@
     background-color: white;
     box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
     border-radius: 3px;
-    overflow: hidden; //fixes border radius at image edges
     display: table;
+    overflow: hidden; //fixes border radius at image edges
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.25);
+    transition: all .5s .2s;
   }
 
   &__left {
-    width: 33.333333%; // 1/3 of the parent element - which ismodal
+    width: 33.333333%; // 1/3 of the parent element - which is modal
     display: table-cell;
     vertical-align: middle;
   }
@@ -40,6 +49,39 @@
   &__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;
+
     column-count: 2;
+    column-gap: 4rem; //1em = 14px; 1em is always font-size of the current element;
+    column-rule: 1px solid $color-grey-light-2;
+
+    hyphens: auto; // - crtica koja se stavlja kad rijec prelazi liniju = hyphens: auto;
+  }
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  &__close {
+    &:link,
+    &:visited {
+      color: $color-grey-dark;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 3rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all .2s;
+      line-height: 1;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
   }
 }
