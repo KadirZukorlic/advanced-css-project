@@ -28,10 +28,12 @@
 1800px+ + :     Big Desktop
 
 $breakpoint argument choices:
-- phone
-- tab-port
-- tab-land
-- big-desktop
+- phone 600px
+- tab-port 900px
+- tab-land 1200px
+- big-desktop 1800px
+
+ORDER: Base + Typography > general layout + grid > page layout > components
 
 1em = 16px
 */

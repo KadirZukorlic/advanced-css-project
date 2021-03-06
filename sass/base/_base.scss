@@ -22,6 +22,8 @@ html {
     font-size: 50%; //1 rem = 8px, 8/16
   }
 
+  //700px example - tab-port will apply, and that is exactly what we want, thats why we made this order above
+
   @include respond(big-desktop) {
     font-size: 75%; // 1 rem = 12px, 12/16
   }
@@ -29,4 +31,9 @@ html {
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) { 
+    padding: 0;
+  }
 }
