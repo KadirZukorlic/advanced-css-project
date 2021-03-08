@@ -124,16 +124,15 @@ body {
   @media (max-width: 56.25em) {
     .heading-secondary {
       font-size: 3rem; } }
-  @media (max-width: 37.5em) {
-    .heading-secondary {
-      font-size: 1.5rem;
-      letter-spacing: 0; } }
   @media (max-width: 112.5em) {
     .heading-secondary {
       font-size: 2.5rem; } }
   @media (max-width: 75em) {
     .heading-secondary {
       font-size: 2.5rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 1.2rem; } }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -212,6 +211,9 @@ body {
   font-size: 1.6rem;
   border: none;
   cursor: pointer; }
+  @media (max-width: 37.5em) {
+    .btn, .btn:link, .btn.visited {
+      font-size: 1rem; } }
 
 .btn:hover {
   transform: translateY(3px);
@@ -559,13 +561,6 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all .3s; }
-  @media (max-width: 37.5em) {
-    .popup {
-      height: 90%;
-      width: 100%;
-      position: fixed;
-      top: 0;
-      left: 0; } }
   .popup__content {
     position: absolute;
     top: 50%;
@@ -583,15 +578,25 @@ body {
     transition: all .5s .2s; }
     @media (max-width: 75em) {
       .popup__content {
-        width: 90%; } }
+        width: 95%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); } }
+    @media (max-width: 56.25em) {
+      .popup__content {
+        width: 95%; } }
     @media (max-width: 37.5em) {
       .popup__content {
-        height: 95%;
         width: 95%; } }
   .popup__left {
     width: 33.333333%;
     display: table-cell;
     vertical-align: middle; }
+    @media (max-width: 37.5em) {
+      .popup__left {
+        height: 95%;
+        width: 95%; } }
   .popup__right {
     width: 66.6666667%;
     display: table-cell;
@@ -610,6 +615,10 @@ body {
     @media (max-width: 56.25em) {
       .popup__text {
         font-size: 1rem; } }
+    @media (max-width: 37.5em) {
+      .popup__text {
+        font-size: .5rem;
+        column-count: 3; } }
   .popup:target {
     opacity: 1;
     visibility: visible; }
