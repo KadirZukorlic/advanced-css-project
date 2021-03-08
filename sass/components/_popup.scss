@@ -11,7 +11,14 @@
 
   transition: all .3s;
 
-  
+  @include respond(phone) {
+    height: 90%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+  }
 
   &__content {
     @include centerHorizontalVertical;
@@ -25,6 +32,16 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(.25);
     transition: all .5s .2s;
+
+    @include respond(tab-land) {
+      width: 90%;
+    }
+
+    @include respond(phone) {
+      height: 95%;
+      width: 95%;
+    }
+
   }
 
   &__left {
@@ -38,6 +55,7 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
   }
 
   &__img {
@@ -55,6 +73,10 @@
     column-rule: 1px solid $color-grey-light-2;
 
     hyphens: auto; // - crtica koja se stavlja kad rijec prelazi liniju = hyphens: auto;
+
+    @include respond(tab-port) {
+      font-size: 1rem;
+    }
   }
 
   &:target {
