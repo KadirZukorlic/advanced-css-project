@@ -26,15 +26,17 @@
 
     @include respond(tab-land) {
       width: 95%;
-      @include centerHorizontalVertical;
+      position: fixed;
     }
 
     @include respond(tab-port) {
       width: 95%;
+      position: fixed;
     }
 
     @include respond(phone) {
       width: 95%;
+      position: fixed;
     }
 
   }
@@ -55,6 +57,15 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include respond(tab-land) {
+      padding: 1.5rem 2.5rem;
+    }
+
+
+    @include respond(tab-port) {
+      padding: 1.5rem 2.5rem;
+    }
 
   }
 
