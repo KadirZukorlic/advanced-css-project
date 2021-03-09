@@ -23,8 +23,13 @@ body {
     animation-duration: 1s;
     animation-timing-function: ease-out;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       letter-spacing: 1rem;
+      font-size: 5rem;
+    }
+
+    @include respond(phone) {
+      letter-spacing: 1.2rem;
       font-size: 5rem;
     }
 
@@ -43,6 +48,10 @@ body {
     animation-name: moveInRight;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+
+    @include respond(tab-port) {
+      letter-spacing: .8rem;
+    }
 
     @include respond(phone) {
       letter-spacing: .5rem;
