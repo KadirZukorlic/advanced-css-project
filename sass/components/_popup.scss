@@ -8,8 +8,13 @@
   z-index: 5000;
   opacity: 0;
   visibility: hidden;
-
   transition: all .3s;
+
+  //backdrop blur instead of dark color
+  backdrop-filter: blur(10px);
+  background-color: rgba($color-black, .3); 
+  //
+  
 
   &__content {
     @include centerHorizontalVertical;
